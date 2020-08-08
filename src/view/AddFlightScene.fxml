@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="450.0" style="-fx-background-color: #edf2f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddFlightController">
+   <effect>
+      <InnerShadow color="#2b2d42" />
+   </effect>
+   <children>
+      <BorderPane prefHeight="550.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <Group BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="flightIdFLD" layoutX="97.0" layoutY="3.0" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #8d99ae;">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </TextField>
+                  <ChoiceBox fx:id="airplaneCHB" layoutX="97.0" layoutY="43.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="180.0" />
+                  <TextField fx:id="fromToFLD" layoutX="97.0" layoutY="83.0" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #8d99ae;">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </TextField>
+                  <DatePicker fx:id="datePCK" layoutX="97.0" layoutY="123.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="180.0" />
+                  <TextField fx:id="timeFLD" layoutX="97.0" layoutY="163.0" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #8d99ae;">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="soldFLD" layoutX="97.0" layoutY="203.0" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #8d99ae;">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="durationFLD" layoutX="97.0" layoutY="243.0" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #8d99ae;">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </TextField>
+                  <Label layoutX="49.0" layoutY="126.0" text="Date :" textFill="#2b2d42">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="47.0" layoutY="166.0" text="Time :" textFill="#2b2d42">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="206.0" text="Sold Tickets :" textFill="#2b2d42">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="246.0" text="Duration :" textFill="#2b2d42">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="5.0" text="Flight ID :" textFill="#2b2d42">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="46.0" text="Airplane :" textFill="#2b2d42">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="88.0" text="From - To :" textFill="#2b2d42">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+         </center>
+         <bottom>
+            <Button fx:id="addBTN" mnemonicParsing="false" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #ef233c;" text="Add" textFill="#2b2d42" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </bottom>
+         <padding>
+            <Insets bottom="60.0" />
+         </padding>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="550.0" style="-fx-background-color: #edf2f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainDashboard">
+   <children>
+      <BorderPane prefHeight="525.0" prefWidth="550.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <Group BorderPane.alignment="CENTER">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #2b2d42;" text="Profile" textFill="#edf2f4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="employeesBTN" alignment="CENTER" contentDisplay="CENTER" layoutX="243.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #2b2d42;" text="Employees" textFill="#edf2f4">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="passengersBTN" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="123.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #2b2d42;" text="Passengers" textFill="#edf2f4">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="airplanesBTN" alignment="CENTER" contentDisplay="CENTER" layoutX="123.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #2b2d42;" text="Airplanes" textFill="#edf2f4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="243.0" layoutY="123.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #2b2d42;" text="Tickets" textFill="#edf2f4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="123.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #2b2d42;" text="Messages" textFill="#edf2f4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="243.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #e63946;" text="Exit" textFill="#f1faee">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="flightsBTN" alignment="CENTER" contentDisplay="CENTER" layoutX="123.0" layoutY="123.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #2b2d42;" text="Flights" textFill="#edf2f4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #2b2d42;" text="Passengers" textFill="#edf2f4">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Button>
+               </children>
+            </Group>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
