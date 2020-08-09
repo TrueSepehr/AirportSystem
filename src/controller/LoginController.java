@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -37,7 +38,7 @@ public class LoginController implements Initializable {
             Database database = new Database();
             String password = database.getPasswordByUsername(usernameFLD.getText());
 
-            if (!password.isEmpty()){
+            if (!passwordIsValid() && !usernameIsValid()){
 
                 if (passwordFLD.getText().equals(password)){
 
@@ -45,10 +46,19 @@ public class LoginController implements Initializable {
                     dashboardStage.setScene(new Scene(loader.getRoot()));
                     dashboardStage.show();
                     loginBTN.getScene().getWindow().hide();
+
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.NONE);
+                    alert.setAlertType(Alert.AlertType.ERROR);
+                    alert.setContentText("Your username or password is wrong!");
+                    alert.show();
                 }
 
-            }else {
-                System.out.println("username or password is wrong!");
+            } else {
+                Alert alert = new Alert(Alert.AlertType.NONE);
+                alert.setAlertType(Alert.AlertType.ERROR);
+                alert.setContentText("Fill all Fields...");
+                alert.show();
             }
         });
 
@@ -69,4 +79,13 @@ public class LoginController implements Initializable {
 
         });
     }
+
+    public boolean usernameIsValid() {
+        return usernameFLD.getText().isEmpty();
+    }
+
+    public boolean passwordIsValid() {
+        return passwordFLD.getText().isEmpty();
+    }
+
 }
