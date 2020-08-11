@@ -1,26 +1,28 @@
 package model;
 
-import java.util.ArrayList;
+import javafx.collections.ObservableList;
+import java.sql.Date;
+import java.sql.Time;
 
 public class Flight implements Showable {
 
-    private String id;
+    private int id;
     private Airplane airplane;
     private Ticket ticket;
-    private ArrayList<Passenger> passengers;
+    private ObservableList<Passenger> passengers;
     private String fromTo;
-    private String date;
-    private String time;
+    private Date date;
+    private Time time;
     private String soldTickets;
     private String duration;
     private enum status {done, undone, flying}
 
-    public Flight(String id, Airplane airplane, Ticket ticket, String fromTo, String date, String time,
-                  String soldTickets, String duration) {
+    public Flight(int id, Airplane airplane, Ticket ticket, String fromTo, Date date, Time time, String soldTickets,
+                  String duration) {
+
         this.id = id;
         this.airplane = airplane;
         this.ticket = ticket;
-        this.passengers = new ArrayList<Passenger>();
         this.fromTo = fromTo;
         this.date = date;
         this.time = time;
@@ -28,12 +30,47 @@ public class Flight implements Showable {
         this.duration = duration;
     }
 
-    public String getId() {
+    public Flight(int id, Airplane airplane, String fromTo, Date date, Time time, String soldTickets, String duration) {
+
+        this.id = id;
+        this.airplane = airplane;
+        this.fromTo = fromTo;
+        this.date = date;
+        this.time = time;
+        this.soldTickets = soldTickets;
+        this.duration = duration;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public ObservableList<Passenger> getPassengers() {
+        return passengers;
+    }
+
+    public void setPassengers(ObservableList<Passenger> passengers) {
+        this.passengers = passengers;
+    }
+
+    public Airplane getAirplane() {
+        return airplane;
+    }
+
+    public void setAirplane(Airplane airplane) {
+        this.airplane = airplane;
+    }
+
+    public Ticket getTicket() {
+        return ticket;
+    }
+
+    public void setTicket(Ticket ticket) {
+        this.ticket = ticket;
     }
 
     public String getFromTo() {
@@ -44,19 +81,19 @@ public class Flight implements Showable {
         this.fromTo = fromTo;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
-    public String getTime() {
+    public Time getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Time time) {
         this.time = time;
     }
 
