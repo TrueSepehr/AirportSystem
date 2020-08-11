@@ -55,12 +55,7 @@ public class EmployeesController implements Initializable {
         incomeCLM.setCellValueFactory(new PropertyValueFactory<>("income"));
         employeesTBL.setItems(data);
 
-        data.addListener(new ListChangeListener<Employee>() {
-            @Override
-            public void onChanged(Change<? extends Employee> c) {
-                employeesTBL.refresh();
-            }
-        });
+        data.addListener((ListChangeListener<Employee>) c -> employeesTBL.refresh());
 
         addBTN.setOnAction(event ->{
 
@@ -102,11 +97,7 @@ public class EmployeesController implements Initializable {
 
         });
 
-        exitBTN.setOnAction(event -> {
-
-            exitBTN.getScene().getWindow().hide();
-
-        });
+        exitBTN.setOnAction(event -> exitBTN.getScene().getWindow().hide());
 
     }
 
