@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #edf2f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MessageController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <Group BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="messageArea" layoutX="3.0" layoutY="112.0" prefHeight="200.0" prefWidth="500.0" promptText="Message">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </TextArea>
+                  <TextArea fx:id="subjectArea" layoutX="3.0" layoutY="58.0" prefHeight="30.0" prefWidth="300.0" promptText="Subject">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </TextArea>
+                  <Label layoutX="176.0" text="Critics and Suggestions">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="sendBTN" layoutX="201.0" layoutY="325.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: #84a98c;" text="Send">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Button>
+               </children>
+            </Group>
+         </center>
+      </BorderPane>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>
