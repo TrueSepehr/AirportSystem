@@ -20,31 +20,72 @@ public class LoginController implements Initializable {
     @FXML Button loginBTN;
     @FXML Button signUpBTN;
 
+    static String loginUsername;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         loginBTN.setOnAction(event -> {
 
-            FXMLLoader loader = new FXMLLoader(LoginController.class.getResource("../view/MainDashboardScene.fxml"));
-
-            try {
-                loader.load();
-
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-
             //check
             Database database = new Database();
             String password = database.getPasswordByUsername(usernameFLD.getText());
+            String username = usernameFLD.getText();
 
             if (!passwordIsValid() && !usernameIsValid()){
 
                 if (passwordFLD.getText().equals(password)){
 
-                    Stage dashboardStage = new Stage();
-                    dashboardStage.setScene(new Scene(loader.getRoot()));
-                    dashboardStage.show();
+                    if (database.getTypeByUsername(username).equalsIgnoreCase("admin")) {
+
+                        FXMLLoader loader = new FXMLLoader(LoginController.class.getResource("../view/MainDashboardScene.fxml"));
+                        loginUsername = usernameFLD.getText();
+
+                        try {
+                            loader.load();
+
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+
+                        Stage dashboardStage = new Stage();
+                        dashboardStage.setScene(new Scene(loader.getRoot()));
+                        dashboardStage.show();
+
+                    } else if (database.getTypeByUsername(username).equalsIgnoreCase("employee")) {
+
+                        FXMLLoader loader = new FXMLLoader(LoginController.class.getResource("../view/EmployeeDashboardScene.fxml"));
+                        loginUsername = usernameFLD.getText();
+
+                        try {
+                            loader.load();
+
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+
+                        Stage dashboardStage = new Stage();
+                        dashboardStage.setScene(new Scene(loader.getRoot()));
+                        dashboardStage.show();
+
+                    } else if (database.getTypeByUsername(username).equalsIgnoreCase("passenger")) {
+
+                        FXMLLoader loader = new FXMLLoader(LoginController.class.getResource("../view/PassengerDashboardScene.fxml"));
+                        loginUsername = usernameFLD.getText();
+
+                        try {
+                            loader.load();
+
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+
+                        Stage dashboardStage = new Stage();
+                        dashboardStage.setScene(new Scene(loader.getRoot()));
+                        dashboardStage.show();
+
+                    }
+
                     loginBTN.getScene().getWindow().hide();
 
                 } else {
