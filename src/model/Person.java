@@ -11,8 +11,9 @@ public class Person {
     private String address;
     private String email;
 
-    public Person(String id, String name, String family, String username, String password,
-                  String phone, String address, String email) {
+    public Person(String id, String name, String family, String username, String password, String phone, String address,
+                  String email) {
+
         this.id = id;
         this.name = name;
         this.family = family;
