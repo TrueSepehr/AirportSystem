@@ -10,6 +10,12 @@ public class Employee extends Person implements Showable {
         this.income = income;
     }
 
+    public Employee(String id, String name, String family, String username, String password,
+                    String phone, String address, String email) {
+        super(id, name, family, username, password, phone, address, email);
+
+    }
+
     public String getIncome() {
         return income;
     }
