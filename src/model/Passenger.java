@@ -8,6 +8,7 @@ public class Passenger extends Person implements Showable {
                      String phone, String address, String email) {
         super(id, name, family, username, password, phone, address, email);
         this.credit = "0";
+        show();
     }
 
     public Passenger(String id, String name, String family, String username, String password,
@@ -26,6 +27,10 @@ public class Passenger extends Person implements Showable {
 
     @Override
     public void show() {
-
+        System.out.println("new object : ");
+        System.out.println(getId() + " - " + getName() + " - " + getFamily() + " - " + getUsername());
+        System.out.println(getEmail());
+        System.out.println(getAddress());
+        System.out.println(getPhone());
     }
 }
