@@ -56,12 +56,7 @@ public class PassengersController implements Initializable {
 
         passengersTBL.setItems(data);
 
-        data.addListener(new ListChangeListener<Passenger>() {
-            @Override
-            public void onChanged(Change<? extends Passenger> c) {
-                passengersTBL.refresh();
-            }
-        });
+        data.addListener((ListChangeListener<Passenger>) c -> passengersTBL.refresh());
 
         addBTN.setOnAction(event -> {
 
@@ -82,19 +77,29 @@ public class PassengersController implements Initializable {
 
         editBTN.setOnAction(event -> {
 
+            FXMLLoader loader = new FXMLLoader(EmployeesController.class.getResource("../view/EditPassengerScene.fxml"));
 
+            try {
+
+                loader.load();
+                Stage signUpStage = new Stage();
+                signUpStage.setScene(new Scene(loader.getRoot()));
+                signUpStage.show();
+
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
 
         });
 
-        editBTN.setOnAction(event -> {
+        removeBTN.setOnAction(event -> {
+
+            database.removePassenger(getPassenger());
+            data.remove(getPassenger());
 
         });
 
-        exitBTN.setOnAction(event -> {
-
-            exitBTN.getScene().getWindow().hide();
-
-        });
+        exitBTN.setOnAction(event -> exitBTN.getScene().getWindow().hide());
 
     }
 
