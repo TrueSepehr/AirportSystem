@@ -67,7 +67,7 @@
                   <TableColumn fx:id="timeCLM" prefWidth="75.0" text="Time" />
                   <TableColumn fx:id="soldTicketsCLM" prefWidth="75.0" text="Sold Tickets" />
                   <TableColumn fx:id="durationCLM" prefWidth="75.0" text="Duration" />
-                  <TableColumn fx:id="statusLCM" prefWidth="75.0" text="Status" />
+                  <TableColumn fx:id="statusCLM" prefWidth="75.0" text="Status" />
               </columns>
             </TableView>
          </center>
