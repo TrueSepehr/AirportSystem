@@ -12,41 +12,43 @@ import java.util.ResourceBundle;
 
 public class MainDashboard implements Initializable {
 
+   @FXML Button profileBTN;
    @FXML Button passengersBTN;
    @FXML Button employeesBTN;
    @FXML Button airplanesBTN;
    @FXML Button flightsBTN;
+   @FXML Button ticketsBTN;
+   @FXML Button messagesBTN;
+   @FXML Button exitBTN;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         passengersBTN.setOnAction(event -> {
 
-            FXMLLoader loader = new FXMLLoader(LoginController.class.getResource("../view/PassengersScene.fxml"));
+            FXMLLoader loader = new FXMLLoader(MainDashboard.class.getResource("../view/PassengersScene.fxml"));
 
             try {
-
                 loader.load();
-                Stage dashboardStage = new Stage();
-                dashboardStage.setScene(new Scene(loader.getRoot()));
-                dashboardStage.show();
+                Stage passengersStage = new Stage();
+                passengersStage.setScene(new Scene(loader.getRoot()));
+                passengersStage.show();
 
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
 
-
         });
 
         employeesBTN.setOnAction(event ->{
 
-            FXMLLoader loader = new FXMLLoader(LoginController.class.getResource("../view/EmployeesScene.fxml"));
-            try {
+            FXMLLoader loader = new FXMLLoader(MainDashboard.class.getResource("../view/EmployeesScene.fxml"));
 
+            try {
                 loader.load();
-                Stage dashboardStage = new Stage();
-                dashboardStage.setScene(new Scene(loader.getRoot()));
-                dashboardStage.show();
+                Stage employeeStage = new Stage();
+                employeeStage.setScene(new Scene(loader.getRoot()));
+                employeeStage.show();
 
             } catch (IOException ex) {
                 ex.printStackTrace();
@@ -56,13 +58,13 @@ public class MainDashboard implements Initializable {
 
         airplanesBTN.setOnAction(event -> {
 
-            FXMLLoader loader = new FXMLLoader(LoginController.class.getResource("../view/airplaneScene.fxml"));
-            try {
+            FXMLLoader loader = new FXMLLoader(MainDashboard.class.getResource("../view/airplaneScene.fxml"));
 
+            try {
                 loader.load();
-                Stage dashboardStage = new Stage();
-                dashboardStage.setScene(new Scene(loader.getRoot()));
-                dashboardStage.show();
+                Stage airplaneScene = new Stage();
+                airplaneScene.setScene(new Scene(loader.getRoot()));
+                airplaneScene.show();
 
             } catch (IOException ex) {
                 ex.printStackTrace();
@@ -72,13 +74,62 @@ public class MainDashboard implements Initializable {
 
         flightsBTN.setOnAction(event -> {
 
-            FXMLLoader loader = new FXMLLoader(LoginController.class.getResource("../view/FlightsScene.fxml"));
-            try {
+            FXMLLoader loader = new FXMLLoader(MainDashboard.class.getResource("../view/FlightsScene.fxml"));
 
+            try {
                 loader.load();
-                Stage dashboardStage = new Stage();
-                dashboardStage.setScene(new Scene(loader.getRoot()));
-                dashboardStage.show();
+                Stage flightStage = new Stage();
+                flightStage.setScene(new Scene(loader.getRoot()));
+                flightStage.show();
+
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+
+        });
+
+        profileBTN.setOnAction(event -> {
+
+            FXMLLoader loader = new FXMLLoader(MainDashboard.class.getResource("../view/ProfileScene.fxml"));
+
+            try {
+                loader.load();
+                Stage employeeStage = new Stage();
+                employeeStage.setScene(new Scene(loader.getRoot()));
+                employeeStage.show();
+
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+
+        });
+
+        messagesBTN.setOnAction(event -> {
+
+            FXMLLoader loader = new FXMLLoader(MainDashboard.class.getResource("../view/ShowMessageScene.fxml"));
+
+            try {
+                loader.load();
+                Stage messageStage = new Stage();
+                messageStage.setScene(new Scene(loader.getRoot()));
+                messageStage.show();
+
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+
+        });
+
+        exitBTN.setOnAction(event -> {
+
+            FXMLLoader loader = new FXMLLoader(MainDashboard.class.getResource("../view/LoginScene.fxml"));
+
+            try {
+                loader.load();
+                Stage employeeStage = new Stage();
+                employeeStage.setScene(new Scene(loader.getRoot()));
+                employeeStage.show();
+                exitBTN.getScene().getWindow().hide();
 
             } catch (IOException ex) {
                 ex.printStackTrace();
@@ -87,4 +138,5 @@ public class MainDashboard implements Initializable {
         });
 
     }
+
 }
