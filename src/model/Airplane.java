@@ -1,17 +1,24 @@
 package model;
 
-import java.util.ArrayList;
+import javafx.collections.ObservableList;
 
 public class Airplane implements Showable {
 
     private String id;
     private String seats;
-    private ArrayList<Flight> flights;
+    private ObservableList<Flight> flights;
 
     public Airplane(String id, String seats) {
         this.id = id;
         this.seats = seats;
-        this.flights = new ArrayList<Flight>();
+    }
+
+    public ObservableList<Flight> getFlights() {
+        return flights;
+    }
+
+    public void setFlights(ObservableList<Flight> flights) {
+        this.flights = flights;
     }
 
     public String getId() {
